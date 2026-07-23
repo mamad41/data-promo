@@ -1,6 +1,6 @@
 from donnees_promo import PROMOTION
 
-# 1. Définition des fonctions 🛠️
+# 1. Définition des fonctions 🛠
 
 def calculer_moyenne(notes):
     if len(notes) > 0:
@@ -23,7 +23,7 @@ def definir_statut(moyenne):
         return "Rien à signaler"
 
 
-# 2. Nettoyage et calcul des moyennes individuelles 🧹
+# 2. Nettoyage et calcul des moyennes individuelles
 
 promo_clean = []
 
@@ -38,7 +38,7 @@ for apprenant in PROMOTION:
     promo_clean.append(apprenant_propre)
 
 
-# 3. Calcul de la moyenne générale 📊
+# 3. Calcul de la moyenne générale
 
 moyennes_valides = [apprenant["moyenne"] for apprenant in promo_clean if apprenant["moyenne"] is not None]
 moyenne_promo = calculer_moyenne_promo(moyennes_valides)
@@ -46,7 +46,7 @@ moyenne_promo = calculer_moyenne_promo(moyennes_valides)
 print(f"La moyenne générale de la promo est de {moyenne_promo:.2f} / 20\n")
 
 
-# 4. Identification des étudiants à accompagner 🎯
+# 4. Identification des étudiants à accompagner
 
 accompagnes_prioritaires = []
 
@@ -59,7 +59,7 @@ for apprenant in promo_clean:
         })
 
 
-# 5. Affichage de la liste prioritaire 📋
+# 5. Affichage de la liste prioritaire
 
 print("=== ÉTUDIANTS À ACCOMPAGNER EN PRIORITÉ ===")
 
